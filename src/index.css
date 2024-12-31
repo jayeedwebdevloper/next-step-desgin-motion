@@ -20,6 +20,15 @@ body {
 .bubble-shadow {
     box-shadow: 10px 10px 100px #5c3fffcc;
 }
+.top-shadow {
+    box-shadow: 0 -20px 130px #5c3fff;
+}
+.bubble-shadow-light {
+    box-shadow: 10px 10px 40px #5c3fff81;
+}
+.bubble-shadow-light:hover {
+    box-shadow: 10px 10px 40px #5c3fffcc;
+}
 .shadow-content {
     box-shadow: 0 0 50px #5c3fff5f;
 }

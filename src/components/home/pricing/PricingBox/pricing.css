@@ -1,0 +1,72 @@
+.animate-button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 250px;
+  height: 80px;
+  border: none;
+  border-radius: 20px;
+  background: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.animate-button:hover {
+    box-shadow: 0 0 50px #5c3fffa9;
+    transition: all 0.5s ease-in-out;
+    scale: 1.1;
+}
+
+.animate-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 3px;
+  background: linear-gradient(to right, #e56b70, #4835d8, #8d4daa, #e56b70);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: 1;
+  transition: background 0.5s ease;
+}
+
+.animate-button:hover::before {
+  background: linear-gradient(to bottom, #e56b70, #4835d8, #8d4daa);
+  transition: background 0.5s ease;
+}
+
+.animate-button span:first-child {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  transition: all 0.5s;
+  z-index: 2;
+}
+
+.animate-button:hover span:first-child {
+  top: -100%;
+  transform: translate(-50%, 0);
+}
+
+.animate-button span:last-child {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  z-index: 2;
+  transition: all 0.5s;
+}
+
+.animate-button:hover span:last-child {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

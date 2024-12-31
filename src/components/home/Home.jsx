@@ -1,3 +1,4 @@
+import Faq from "../FAQ/Faq";
 import Reviews from "../Reviews/Reviews";
 import Banner from "./Banner/Banner";
 import Benefits from "./Benefits/Benefits";
@@ -24,6 +25,7 @@ export default function Home() {
       <RecentWorks />
       <Services />
       <Pricing />
+      <Faq />
     </div>
   )
 }

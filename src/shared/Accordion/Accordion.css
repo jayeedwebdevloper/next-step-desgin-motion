@@ -1,0 +1,20 @@
+.accordion {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  cursor: pointer;
+  user-select: none;
+}
+
+.accordion-header h3 {
+  margin: 0;
+}
+
+.accordion-content {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.5s ease, opacity 0.5s ease;
+}
